@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c0c0e;
+  --color-surface: #141416;
+  --color-elevated: #1c1c20;
+  --color-fg: #e8e4dc;
+  --color-muted: #8a9099;
+  --color-subtle: #5c6168;
+  --color-border: #2a2a2e;
+  --color-accent: #d6d0c4;
+  --color-accent-fg: #0c0c0e;
+  --color-danger: #b42318;
+  --color-ok: #3d7a5a;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #app {
+    min-height: 100vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
